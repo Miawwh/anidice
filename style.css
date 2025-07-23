@@ -1,0 +1,45 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.7s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url(DefaultAnimeImage.png) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  backdrop-filter: blur(3px);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.fancy {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+#visibility {
+  visibility: hidden;
+}
