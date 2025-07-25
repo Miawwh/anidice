@@ -12,6 +12,7 @@ button.addEventListener("click", async () => {
     const req = await axios.get(
       `https://api.nekosia.cat/api/v1/images/${optionCategories.value}`
     );
+    console.log(req);
     const textCopyRight = document.createElement("a");
     const placeCopyRight = document.createElement("div");
     placeCopyRight.classList.add(
@@ -38,6 +39,7 @@ button.addEventListener("click", async () => {
     img.src = req.data.image.original.url;
     img.classList.add("card-img-top", "img-fluid", "rounded-top");
     atribute.removeAttribute("id");
+    img.alt = `An anime illustration of a ${optionCategories.value} tag, created by ${req.data.attribution.artist.username}`;
 
     imagePlace.innerHTML = "";
 
