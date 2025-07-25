@@ -6,7 +6,7 @@ A simple and beginner-friendly mini project that allows users to view and downlo
 
 ## 🌐 Live Preview
 
-You can check out the project [here](https://miawwh.github.io/tagami/)
+You can check out the project [here](https://miawwh.github.io/anidice/)
 
 > *Or clone the repo and open it locally (see below)*
 
